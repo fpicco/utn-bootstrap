@@ -1,108 +1,48 @@
-:root{
+:root {
   scroll-behavior: smooth;
 }
-body{
+body {
   margin-top: 55px;
 }
-#header {
-  background-color: blue;
+.h2-personalizado {
+  font-family: "Great Vibes", cursive;
+  z-index: 10000;
 }
-
-#header__nav--main {
-  background-color: pink;
-}
-/* #header__nav--idiomas {
-  background-color: red;
-} */
 
 #inicio {
-  background-color: lightblue;
-  /* height: 875px; */
+  background-color: #000;
+  color: #bbbbbb;
 }
-#inicio__photo--main {
-  background-color: gray;
-  height: 500px;
-}
-#inicio__visitar--text {
-  background-color: black;
-  height: 300px;
-}
-#inicio__visitar--photo1 {
-  background-color: brown;
-  height: 300px;
-}
-/* #inicio__visitar--photo2 {
-  background-color: violet;
-  height: 300px;
-} */
-#inicio__visitar--promo1 {
-  background-color: orange;
-  height: 75px;
-}
-#inicio__visitar--promo2 {
-  background-color: beige;
-  height: 75px;
-}
+#inicio__visitar--promo1,
 #inicio__visitar--promo3 {
-  background-color: purple;
-  height: 75px;
+  background-color: #fff;
 }
+#inicio__visitar--promo2,
 #inicio__visitar--promo4 {
-  background-color: lightblue;
-  height: 75px;
+  background-color: #000;
 }
-#nosotros {
-  background-color: green;
-  /* height: 400px; */
-}
-#nosotros__photo {
-  background-color: rgba(0, 0, 255, 0.479);
-  height: 400px;
-}
-#nosotros__text {
-  background-color: burlywood;
-  height: 400px;
-}
-#contacto {
-  background-color: yellow;
-  /* height: 300px; */
-}
-#contacto__photo {
-  background-color: rebeccapurple;
-  height: 301px;
-}
-#contacto__form {
-  /* background-color:darkblue; */
-}
+#nosotros,
+#contacto,
 #fotos {
-  background-color: indianred;
-  height: 200px;
+  background-color: #292b2c;
+  color: #fff;
 }
-#fotos--1 {
-  background-color: tan;
+#img-nosotros{
+  filter: grayscale(70%);
 }
-#fotos--2 {
-  background-color: turquoise;
-}
-#fotos--3 {
-  background-color: lavender;
-}
-#fotos--4 {
-  background-color: brown;
-}
-#fotos--5 {
-  background-color: blue;
+#img-nosotros:hover{
+  filter: grayscale(0);
+  transition: all 1s;
 }
 
-#footer {
-  background-color: red;
-  height: 75px;
+.icon-personalizacion, .links-personalizacion {
+  color: rgb(167, 166, 166);
 }
-#footer__copyright {
-  background-color: palegoldenrod;
-  height: 75px;
+.icon-personalizacion{
+  font-size: 35px;
 }
-#footer__info {
-  background-color: yellow;
-  height: 75px;
+
+.icon-personalizacion:hover,
+.links-personalizacion:hover {
+  color: #fff !important;
 }
