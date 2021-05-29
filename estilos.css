@@ -40,14 +40,7 @@ header{
   filter: grayscale(0);
   transition: all 1s;
 }
-.enlace-personalizacion::before {
-  /* display: block;
-  background-color: red;
-  content: " ";
-  margin-top: -55px;
-  height: 55px;
-  visibility: hidden;*/
-} 
+
 .icon-personalizacion,
 .links-personalizacion {
   color: rgb(167, 166, 166);
@@ -62,7 +55,6 @@ header{
 }
 
 
-
 .nosotros2, .contacto2{
   position: relative;
 
@@ -71,4 +63,5 @@ header{
   position: absolute;
   top: -55px;
   height: 55px;
+  z-index:-1;
 }
