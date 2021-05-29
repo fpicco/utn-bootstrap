@@ -4,6 +4,9 @@
 body {
   margin-top: 55px;
 }
+header{
+  border-bottom: 1px solid rgb(131, 131, 131);
+}
 .h2-personalizado {
   font-family: "Great Vibes", cursive;
   z-index: 10000;
@@ -56,4 +59,16 @@ body {
 .icon-personalizacion:hover,
 .links-personalizacion:hover {
   color: #fff !important;
+}
+
+
+
+.nosotros2, .contacto2{
+  position: relative;
+
+}
+.nosotros2-hijo, .contacto2-hijo{
+  position: absolute;
+  top: -55px;
+  height: 55px;
 }
