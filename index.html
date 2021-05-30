@@ -41,7 +41,7 @@
                                 <a class="nav-link links-personalizacion" href="#contacto-div">Contacto</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link links-personalizacion d-none d-md-block" href="#fotos">Fotos</a>
+                                <a class="nav-link links-personalizacion" href="#fotos">Fotos</a>
                             </li>
                         </ul>
                     </div>
@@ -341,54 +341,109 @@
         <section class="row align-items-center" id="contacto">
 
             <!-- inicio form -->
-            <form class="p-3 px-md-2 pr-md-4 pl-md-4 col-md-6" id="contacto__form">
+            <form class="p-3 px-md-2 pr-md-4 pl-md-4 col-md-6 needs-validation" novalidate id="contacto__form">
                 <div class="row mx-auto">
                     <div class="d-flex">
                         <div class="align-self-center">
                             <h3>Contacto</h3>
-                        <p class="text-justify">¡No dudes en contactarnos ante cualquier inquietud! El tiempo de
-                            respuesta habitual es de menos de 1 hora.</p>
+                            <p class="text-justify">¡No dudes en contactarnos ante cualquier inquietud! El tiempo de
+                                respuesta habitual es de menos de 1 hora.</p>
                         </div>
-                        
+
                     </div>
 
                 </div>
-                <div class="row">
+
+                <div class="form-row">
                     <div class="col-md-6 pr-md-1">
-                        <input tyr="text" class="form-control mt-1" placeholder="Nombre" required>
+                        <input tyr="text" class="form-control mt-1" placeholder="Nombre" minlength="4" required>
+                        <div class="valid-feedback">
+                            Hola! Un gusto que nos contactes.
+                        </div>
+                        <div class="invalid-feedback">
+                            No seas tímido, dinos tu nombre!
+                        </div>
                     </div>
                     <div class="col-md-6 pl-md-1">
-                        <input type="text" class="form-control mt-1" placeholder="Apellido" required>
+                        <input type="text" class="form-control mt-1" placeholder="Apellido"  minlength="4"  required>
+                        <div class="valid-feedback">
+                            Bien! Vamos conociendote!
+                        </div>
+                        <div class="invalid-feedback">
+                            Te faltó decirnos tu apellido!
+                        </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="form-row">
                     <div class="col-md-7 pr-md-1">
                         <input type="email" class="form-control mt-1" placeholder="Email" required>
+                        <div class="valid-feedback">
+                            Usaremos este e-mail para contactarte.
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa tu e-mail.
+                        </div>
                     </div>
                     <div class="col-md-5 pl-md-1">
-                        <input type="tel" class="form-control mt-1" placeholder="Teléfono" pattern="[a-z]{1,15}">
+                        <input type="tel" class="form-control mt-1" placeholder="Teléfono" pattern="[1-9, +]{5,15}"
+                            required>
+                        <div class="valid-feedback">
+                            Usaremos este número para contactarte.
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor ingresa un número de contacto.
+                        </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="form-row">
                     <div class="col">
-                        <select id="motivo" class="form-control mt-1">
-                            <option selected>Motivo de contacto</option>
+                        <select id="motivo" class="form-control custom-select mt-1" required>
+                            <option selected disabled value="">Motivo de contacto</option>
                             <option>Organizar un viaje de turismo</option>
                             <option>Organizar un viaje de negocios</option>
                             <option>Trabajar con nosotros</option>
                         </select>
+                        <div class="valid-feedback">
+                           Un asesor especializado en lo que buscas, se comunicará contigo.
+                        </div>
+                        <div class="invalid-feedback">
+                            Por favor indica el motivo de contacto para poder asesorarte mejor.
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="form-check m-2 mt-3">
-                        <input class="form-check-input" type="checkbox" id="robot" required>
-                        <label class="form-check-label" for="robot">
+                        <input class="form-check-input" type="checkbox" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
                             No soy un robot
                         </label>
+                        <div class="invalid-feedback">
+                            Debes clickear la casilla para poder enviar el formulario.
+                        </div>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-outline-warning m-1 w-100">Enviar</button>
             </form>
+            <script>
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                    'use strict';
+                    window.addEventListener('load', function () {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function (form) {
+                            form.addEventListener('submit', function (event) {
+                                if (form.checkValidity() === false) {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                                form.classList.add('was-validated');
+                            }, false);
+                        });
+                    }, false);
+                })();
+            </script>
             <!-- fin form -->
             <div class="col-md-6 p-0" id="contacto__photo">
                 <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no"
